@@ -1,0 +1,154 @@
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: background-color 0.3s;
+}
+
+
+
+.calculator {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(243, 2, 2, 0.2);
+  display: inline-block;
+  width: 300px;
+  padding: 20px;
+  height: 500px; /* Make the calculator taller */
+  overflow: auto; /* Add scrolling for overflow content */
+}
+.display {
+  text-align: right;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+input {
+  border: none;
+  width: 250px;
+  padding: 10px;
+  font-size: 1.5rem;
+  outline: none;
+}
+
+.result {
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+button {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 25px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s;
+
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+.dark-theme .App {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-theme .calculator {
+  background-color: #444;
+  border: 1px solid #555;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.dark-theme .display {
+  background-color: #222;
+  border: 1px solid #333;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
+.dark-theme input {
+  color: #fff;
+  background-color: #333;
+}
+
+.dark-theme .result {
+  color: #fff;
+}
+
+.dark-theme button {
+  background-color: #555;
+  border: 1px solid #333;
+  color: #fff;
+}
+
+/* Change the theme-toggle button styles for the dark theme */
+.theme-toggle {
+  margin-top: 10px;
+  background-color: #9bd5fc;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+
+/* Add styles for the custom slider button */
+.slider-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-label {
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+.theme-toggle {
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.theme-toggle.dark-theme {
+  background-color: #3498db;
+}
+
+.slider-button {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  transition: transform 0.3s;
+}
+
+.dark-theme .slider-button {
+  transform: translateX(20px);
+}
